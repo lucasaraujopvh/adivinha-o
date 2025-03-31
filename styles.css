@@ -14,6 +14,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
 }
 
 h1 {
@@ -25,6 +27,7 @@ input {
     font-size: 16px;
     margin: 10px 0;
     width: calc(100% - 22px);
+    box-sizing: border-box;
 }
 
 button {
@@ -35,6 +38,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
 }
 
 button:hover {
@@ -47,13 +51,20 @@ button:hover {
 }
 
 #message.right {
-    margin-top: 20px;
-    font-size: 18px;
     color: #008000;
 }
 
 #message.wrong {
-    margin-top: 20px;
-    font-size: 18px;
     color: #ffa500;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
 }
